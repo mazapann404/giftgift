@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title> feliz cummmple♡ </title>
+
+<style>
+body{
+  margin:0;
+  font-family:cursive;
+  background:radial-gradient(circle,#1a001f,#000);
+  color:white;
+  overflow-x:hidden;}
+
+.star{ position:fixed;
+  width:2px;height:2px;
+  background:white;
+  animation:twinkle 2s infinite alternate;}
+@keyframes twinkle{
+  from{opacity:0.2}to{opacity:1}
+}
+
+h1{
+  text-align:center;
+  font-size:55px;
+  color:#ff66cc;
+  text-shadow:0 0 10px #ff66cc;}
+
+/* textowuwuwu */
+p{
+  max-width:600px;
+  margin:20px auto;
+  text-align:center;
+  background:#ffffff10;
+  padding:15px;
+  border-radius:15px;}
+
+/* cartita */
+.carta{
+  max-width:600px;
+  margin:20px auto;
+  background:white;
+  color:#333;
+  padding:20px;
+  border-radius:15px;}
+
+/* fotoscollage */
+.collage{
+  position:relative;
+  height:900px;}
+
+.foto{
+  position:absolute;
+  width:220px;
+  border-radius:15px;
+  box-shadow:0 5px 20px #000;
+  opacity:0;
+  transform:translateY(40px);
+  animation:aparecer 1s forwards;}
+
+@keyframes aparecer{
+  to{opacity:1;transform:translateY(0)}}
+
+.f1{top:50px;left:8%;animation-delay:.5s}
+.f2{top:90px;right:10%;animation-delay:1s}
+.f3{top:320px;left:15%;animation-delay:1.5s}
+.f4{top:350px;right:15%;animation-delay:2s}
+.f6{top:620px;left:30%;animation-delay:2.5s}
+.f7{top:620px;right:25%;animation-delay:3s}
+
+.flor1{position:absolute;top:10px;right:10px;width:120px}
+.flor2{position:absolute;bottom:10px;left:10px;width:120px}
+
+.decor{position:absolute;font-size:28px}
+.d1{top:200px;left:5%}
+.d2{top:700px;right:5%}
+.d3{top:450px;left:50%}
+
+.cor{
+  position:fixed;
+  animation:flotar linear infinite;}
+@keyframes flotar{
+  0%{transform:translateY(100vh)}
+  100%{transform:translateY(-10vh);opacity:0}}
+</style>
+</head>
+
+<body>
+
+<h1>Feliz cumpleaños tilinaa 💖</h1>
+
+<p>
+Hay infinitas razones para quererte <br>
+y cada día quiero descubrir una más ♡<br><br>
+</p>
+
+<div class="carta">
+
+  Me haces muy feliz tilina, de una forma que no sé explicar del todo,
+  pero que siento muchísimo.<br><br>
+  Gracias por ser tú, por existir y por coincidir conmigo ♡.<br><br>
+  Ojalá tener más momentos bonitos juntas 💖
+</div>
+
+<audio id="m" autoplay loop>
+<source src="Song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="collage">
+
+<img src="imagenes/Foto 1.jpg" class="foto f1">
+<img src="imagenes/Foto 4.jpg" class="foto f2">
+<img src="imagenes/Foto 6.jpg" class="foto f3">
+<img src="imagenes/Foto 2.jpg" class="foto f4">
+<img src="imagenes/Foto 3.jpg" class="foto f6">
+<img src="imagenes/Foto 7.jpg" class="foto f7">
+
+<img src="imagenes/Foto 5.gif" class="flor1">
+<img src="imagenes/Foto 5.gif" class="flor2">
+
+<div class="decor d1">✨</div>
+<div class="decor d2">🪐</div>
+<div class="decor d3">💫</div>
+
+</div>
+
+<script>
+
+/* estrellasdeco */
+for(let i=0;i<80;i++){
+let s=document.createElement("div");
+s.className="star";
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+document.body.appendChild(s);
+}
+
+/* musica */
+let a=document.getElementById("m");
+a.play().catch(()=>document.body.onclick=()=>a.play());
+
+/* decodecocora */
+for(let i=0;i<25;i++){
+let c=document.createElement("div");
+c.innerHTML="💖";
+c.className="cor";
+c.style.left=Math.random()*100+"vw";
+c.style.fontSize=(Math.random()*20+15)+"px";
+c.style.animationDuration=(Math.random()*5+5)+"s";
+document.body.appendChild(c);
+}
+
+</script>
+
+</body>
+</html>
